@@ -5,7 +5,7 @@ const section = document.querySelector('section');
 
 const user = getUser();
 
-if (user.completed['castle'] === true && user.completed['fountain'] && user.completed['cave']) {
+if (user.completed['castle'] && user.completed['fountain'] && user.completed['cave']) {
     window.location = '../results';
 }
 

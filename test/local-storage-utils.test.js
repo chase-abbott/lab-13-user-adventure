@@ -1,4 +1,4 @@
-import { setUser, getUser } from '../local-storage-utils.js';
+import { setUser, getUser, updateUser } from '../local-storage-utils.js';
 
 const test = QUnit.test;
 
@@ -32,3 +32,37 @@ test('Test getUser function', (expect) => {
 
     expect.deepEqual(actual, expected);
 });
+
+test('Test updateUser function', (expect) => {
+
+    const user = {
+        name: 'Chase',
+        gold: 20,
+        hp: 20,
+        completed: {},
+        class: 'warrior'
+    }
+
+    localStorage.setItem('USER', JSON.stringify(user));
+
+    const choice = {
+        hp: 100,
+        gold: -20
+    };
+
+    const expected = {
+        name: 'Chase',
+        gold: 0,
+        hp: 120,
+        completed: {
+            cave: true
+        },
+        class: 'warrior'
+    };
+
+    updateUser('cave', choice);
+
+    const actual = JSON.parse(localStorage.getItem('USER'));
+    expect.deepEqual(actual, expected);
+});
+
