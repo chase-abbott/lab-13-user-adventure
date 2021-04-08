@@ -13,3 +13,7 @@ export function getUser() {
 
     return parsedArray;
 }
+
+export function updateUser() {
+
+}
