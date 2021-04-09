@@ -1,6 +1,7 @@
 form {
     display: flex;
     flex-direction: column;
+    padding: 5vw;
 }
 
 div {
@@ -13,4 +14,10 @@ footer {
     display: flex;
     justify-content: center;
     background-color: whitesmoke;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    padding: 5px;
 }

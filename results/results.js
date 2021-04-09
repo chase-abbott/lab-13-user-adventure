@@ -36,13 +36,13 @@ if (user.hp >= 35) {
 
 let whichGoldMessage;
 
-if (hpStatus != 'dead') {
+if (hpStatus !== 'dead') {
     whichGoldMessage = aliveGoldMessages;
 } else {
     whichGoldMessage = deadGoldMessages;
 }
 
-text.textContent = `${hpMessages[hpStatus]} ${whichGoldMessage[goldStatus]}`
+text.textContent = `${hpMessages[hpStatus]} ${whichGoldMessage[goldStatus]}`;
 
 
 button.textContent = 'Reset';

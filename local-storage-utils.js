@@ -1,5 +1,4 @@
 import { quests } from './data.js';
-import { renderHeader } from './render-utils.js';
 
 const USER = 'USER';
 
