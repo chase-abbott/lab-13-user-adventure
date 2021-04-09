@@ -7,7 +7,9 @@ export function setUser(user) {
 }
 
 export function getUser() {
-    const stringyArray = localStorage.getItem('USER');
+    const stringyArray = localStorage.getItem(USER);
+
+    if (!stringyArray) return {};
 
     const parsedArray = JSON.parse(stringyArray);
 
