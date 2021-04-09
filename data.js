@@ -2,9 +2,10 @@
 const castle = {
     id: 'castle',
     title: "The King's Castle",
-    // map: {
-
-    // },
+    map: {
+        top: '12%',
+        left: '15%'
+    },
     image: 'castle.png',
     description: 'You enter the front gates to a large town square',
     choices: [{
@@ -32,9 +33,10 @@ const castle = {
 const fountain = {
     id: 'fountain',
     title: 'The Fountain of Youth',
-    // map: {
-
-    // },
+    map: {
+        top: '65%',
+        left: '23%'
+    },
     image: 'pond.png',
     description: 'In a clearing you see a rocky outcropping surrounding a small pond that looks magical.',
     choices: [{
@@ -61,9 +63,10 @@ const fountain = {
 const cave = {
     id: 'cave',
     title: 'Spooky Cave',
-    // map: {
-
-    // },
+    map: {
+        top: '10%',
+        left: '72%'
+    },
     image: 'cave.png',
     description: 'You approach an enormous opening in the side of a hill and assume it goes very deep',
     choices: [{

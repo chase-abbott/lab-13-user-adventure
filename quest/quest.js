@@ -3,7 +3,7 @@ import { updateUser, getUser } from '../local-storage-utils.js';
 import { findById } from '../utils.js';
 import { renderHeader } from '../render-utils.js';
 
-const body = document.querySelector('body');
+const main = document.querySelector('main');
 const section = document.querySelector('section');
 
 const user = getUser();
@@ -12,7 +12,7 @@ const questId = params.get('id');
 const quest = findById(quests, questId);
 
 const header = renderHeader(user);
-body.append(header, section);
+main.append(header, section);
 
 const title = document.createElement('h2');
 title.textContent = quest.title;
