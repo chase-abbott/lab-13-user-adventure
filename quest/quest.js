@@ -12,7 +12,6 @@ const questId = params.get('id');
 const quest = findById(quests, questId);
 
 const header = renderHeader(user);
-
 body.append(header, section);
 
 const title = document.createElement('h2');

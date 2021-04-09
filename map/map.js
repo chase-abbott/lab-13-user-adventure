@@ -20,7 +20,14 @@ for (let quest of quests) {
 
     anchorTag.textContent = quest.title;
     anchorTag.href = `../quest/?id=${quest.id}`;
+    anchorTag.id = quest.id;
 
     section.append(anchorTag);
 }
 
+for (let quest of quests) {
+    if (user.completed[quest.id]) {
+        const link = document.querySelector(`#${quest.id}`);
+        link.classList.add('disabled');
+    }
+}
