@@ -70,7 +70,7 @@ const cave = {
         id: 'run',
         description: "Don't want any of that mess, run away",
         result: 'An enormous sabertooth jumps at you and mauls you for 40 damage',
-        hp: 45,
+        hp: -45,
         gold: 0
     }, {
         id: 'bribe',

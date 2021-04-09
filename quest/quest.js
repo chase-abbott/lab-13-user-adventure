@@ -1,4 +1,5 @@
 import { quests } from '../data.js';
+import { updateUser } from '../local-storage-utils.js';
 import { findById } from '../utils.js';
 
 
@@ -14,9 +15,12 @@ title.textContent = quest.title;
 const image = document.createElement('img');
 image.src = quest.image;
 
+const description = document.createElement('p');
+description.textContent = quest.description;
+
 const form = document.createElement('form');
 
-section.append(title, image, form);
+section.append(title, image, description, form);
 
 for (let questChoice of quest.choices) {
     const label = document.createElement('label');
@@ -34,12 +38,24 @@ for (let questChoice of quest.choices) {
 
 const button = document.createElement('button');
 button.textContent = 'Submit';
+form.append(button);
 
-button.addEventListener('submit', (event) => {
+form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const data = new FormData('choices');
+    const data = new FormData(form);
+    const chosenOptionId = data.get('choices')
 
+    const chosenOption = findById(quest.choices, chosenOptionId);
+
+    form.textContent = chosenOption.result;
+
+    updateUser(questId, chosenOption);
+
+    function changeWindow() {
+        window.location = '../map';
+    }
+
+    setTimeout(changeWindow, 3000);
 })
 
-form.append(button);
