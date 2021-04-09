@@ -5,7 +5,7 @@ const castle = {
     // map: {
 
     // },
-    image: '',
+    image: 'castle.png',
     description: 'You enter the front gates to a large town square',
     choices: [{
         id: 'king',
@@ -35,7 +35,7 @@ const fountain = {
     // map: {
 
     // },
-    image: '',
+    image: 'pond.png',
     description: 'In a clearing you see a rocky outcropping surrounding a small pond that looks magical.',
     choices: [{
         id: 'jump',
@@ -64,7 +64,7 @@ const cave = {
     // map: {
 
     // },
-    image: '',
+    image: 'cave.png',
     description: 'You approach an enormous opening in the side of a hill and assume it goes very deep',
     choices: [{
         id: 'run',

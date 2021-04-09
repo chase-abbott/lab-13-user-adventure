@@ -13,7 +13,7 @@ const title = document.createElement('h2');
 title.textContent = quest.title;
 
 const image = document.createElement('img');
-image.src = quest.image;
+image.src = `../assets/${quest.image}`;
 
 const description = document.createElement('p');
 description.textContent = quest.description;
