@@ -33,7 +33,7 @@ for (let questChoice of quest.choices) {
 
     label.append(questChoice.description, input);
 
-    form.append(label)
+    form.append(label);
 }
 
 const button = document.createElement('button');
@@ -44,7 +44,7 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const data = new FormData(form);
-    const chosenOptionId = data.get('choices')
+    const chosenOptionId = data.get('choices');
 
     const chosenOption = findById(quest.choices, chosenOptionId);
 
@@ -57,5 +57,5 @@ form.addEventListener('submit', (event) => {
     }
 
     setTimeout(changeWindow, 3000);
-})
+});
 

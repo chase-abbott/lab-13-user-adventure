@@ -1,4 +1,4 @@
-const USER = 'USER'
+const USER = 'USER';
 
 export function setUser(user) {
     const stringyArray = JSON.stringify(user);

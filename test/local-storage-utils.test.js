@@ -41,7 +41,7 @@ test('Test updateUser function', (expect) => {
         hp: 20,
         completed: {},
         class: 'warrior'
-    }
+    };
 
     localStorage.setItem('USER', JSON.stringify(user));
 

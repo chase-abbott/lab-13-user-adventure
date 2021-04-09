@@ -8,6 +8,6 @@ button.textContent = 'Reset';
 button.addEventListener('click', () => {
     localStorage.clear;
     window.location = '../';
-})
+});
 
 section.append(button);

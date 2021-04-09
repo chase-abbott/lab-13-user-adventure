@@ -22,7 +22,7 @@ const castle = {
     }, {
         id: 'bar',
         description: "You've had a long journey, head to the bar to get a drink",
-        result: "The town drunk challenges you to a fight for 15 gold. You win but at a cost of a black eye. Lose 10 health but gain 15 gold",
+        result: 'The town drunk challenges you to a fight for 15 gold. You win but at a cost of a black eye. Lose 10 health but gain 15 gold',
         hp: -10,
         gold: 15
     }]
@@ -91,4 +91,4 @@ export const quests = [
     castle,
     fountain,
     cave,
-]
+];

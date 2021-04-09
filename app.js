@@ -10,16 +10,15 @@ form.addEventListener('submit', (event) => {
     const userClass = data.get('user-class');
     const userName = data.get('name');
 
-    console.log(userClass)
     const user = {
         hp: 35,
         gold: 0,
         name: userName,
         class: userClass,
         completed: {}
-    }
+    };
 
     setUser(user);
 
     window.location = './map';
-})
+});
