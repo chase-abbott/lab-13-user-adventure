@@ -6,7 +6,7 @@ export const aliveGoldMessages = {
 };
 
 export const deadGoldMessages = {
-    superRich: 'Your family forgets about you use the treasure you found to take the castle from the king.',
+    superRich: 'Your family forgets about you and use the treasure you found to take the castle from the king.',
     rich: 'Your family cherishes your memory by building a monumnet in your honor and gets the best house in town.',
     neitherRichNorPoor: "Your family appreciates the comfort you've given them.",
     poor: 'Your family scorns your memory and lives the rest of their lives in squalor.'
