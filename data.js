@@ -22,9 +22,9 @@ const castle = {
     }, {
         id: 'bar',
         description: "You've had a long journey, head to the bar to get a drink",
-        result: 'The town drunk challenges you to a fight for 15 gold. You win but at a cost of a black eye. Lose 10 health but gain 15 gold',
-        hp: -10,
-        gold: 15
+        result: 'The town drunk challenges you to a fight for 15 gold. You win but at a cost of a black eye. Lose 20 health but gain 25 gold',
+        hp: -20,
+        gold: 25
     }]
 
 };
@@ -75,7 +75,7 @@ const cave = {
     }, {
         id: 'bribe',
         description: 'Convince a passerby to join you',
-        result: 'You enter to find a  sabertooth! You and your friend best it but lose 10hp and find a treasure chest not far from it. You spilt the treasure and gain 40g gold',
+        result: 'You enter to find a  sabertooth! You and your friend best it but lose 10hp and find a treasure chest not far from it. You spilt the treasure and gain 40 gold',
         hp: -10,
         gold: 40,
     }, {

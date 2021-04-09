@@ -1,4 +1,4 @@
-import { findById } from '../utils.js';
+import { findById, findResults } from '../utils.js';
 
 
 
@@ -20,6 +20,17 @@ test('Test findById function', (expect) => {
     };
 
     const actual = findById(array, 1);
+
+    expect.deepEqual(actual, expected);
+});
+
+test('Test findResults function', (expect) => {
+
+    const expected = ['stronger than ever', 'you and your family buy the best house in town.'];
+
+
+    const actual = findResults(35, 35);
+
 
     expect.deepEqual(actual, expected);
 });

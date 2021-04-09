@@ -1,11 +1,11 @@
 import { quests } from '../data.js';
-import { getUser } from '../local-storage-utils.js';
+import { getUser, areQuestsCompleted } from '../local-storage-utils.js';
 
 const section = document.querySelector('section');
 
 const user = getUser();
 
-if (user.completed['castle'] && user.completed['fountain'] && user.completed['cave']) {
+if (areQuestsCompleted() || user.hp < 0) {
     window.location = '../results';
 }
 
