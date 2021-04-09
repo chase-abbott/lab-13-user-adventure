@@ -15,7 +15,36 @@
 <body>
     <main>
         <section class="main-section">
+            <form>
+                <label>
+                    Name:
+                    <input type="text" name="name" required>
+                </label>
+                <div>
+                    <label>
+                        Warrior
+                        <input type="radio" name="user-class" value="warrior" checked>
+                    </label>
+                    <label>
+                        Cleric
+                        <input type="radio" name="user-class" value="cleric">
+                    </label>
+                    <label>
+                        Rouge
+                        <input type="radio" name="user-class" value="rouge">
+                    </label>
+                    <label>
+                        Mage
+                        <input type="radio" name="user-class" value="mage">
+                    </label>
+                    <label>
+                        Paladin
+                        <input type="radio" name="user-class" value="paladin">
+                    </label>
+                </div>
+                <button id="button">Start Your Journey!</button>
 
+            </form>
         </section>
     </main>
     <script type="module" src="app.js"></script>

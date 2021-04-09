@@ -1,1 +1,10 @@
-/* add home page styles here */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}

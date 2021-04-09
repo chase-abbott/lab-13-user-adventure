@@ -1,5 +1,24 @@
-// import functions and grab DOM elements
+import { setUser } from './local-storage-utils.js';
 
-// initialize state
+const form = document.querySelector('form');
 
-// set event listeners to update state and DOM
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const data = new FormData(form);
+
+    const userClass = data.get('user-class');
+    const userName = data.get('name');
+
+    const user = {
+        hp: 35,
+        gold: 0,
+        name: userName,
+        class: userClass,
+        completed: {}
+    };
+
+    setUser(user);
+
+    window.location = './map';
+});
