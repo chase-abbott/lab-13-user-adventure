@@ -54,8 +54,8 @@ form.addEventListener('submit', (event) => {
     const chosenOption = findById(quest.choices, chosenOptionId);
 
     form.textContent = chosenOption.result;
-
-    updateUser(questId, chosenOption, header);
+    const h2 = document.querySelector('h2');
+    updateUser(questId, chosenOption, h2);
 
     function changeWindow() {
         window.location = '../map';

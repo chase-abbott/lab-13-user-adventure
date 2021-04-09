@@ -1,3 +1,25 @@
+header {
+    font-size: 3em;
+    font-weight: 700;
+    box-shadow: none;
+    width: 100vw;
+    background-color: white;
+    height: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1vw;
+}
+
+
+header > img {
+    margin: 2vw;
+}
+
+section {
+    margin: 0,
+}
+
 form {
     display: flex;
     flex-direction: column;

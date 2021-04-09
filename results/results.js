@@ -1,10 +1,17 @@
 import { getUser } from '../local-storage-utils.js';
 import { aliveGoldMessages, deadGoldMessages, hpMessages } from '../messages.js';
+import { renderHeader } from '../render-utils.js';
 
+const body = document.querySelector('body');
+const main = document.querySelector('main');
 const section = document.querySelector('section');
 const button = document.createElement('button');
 const text = document.createElement('p');
 const user = getUser();
+const header = renderHeader(user);
+
+body.append(header, main);
+main.append(section);
 
 let goldStatus;
 let hpStatus;
