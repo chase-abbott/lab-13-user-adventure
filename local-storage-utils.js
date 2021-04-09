@@ -1,4 +1,5 @@
 import { quests } from './data.js';
+import { renderHeader } from './render-utils.js';
 
 const USER = 'USER';
 
@@ -18,7 +19,7 @@ export function getUser() {
     return parsedArray;
 }
 
-export function updateUser(questId, choice) {
+export function updateUser(questId, choice, header) {
     const user = getUser();
 
     user.gold = choice.gold + user.gold;
@@ -26,6 +27,8 @@ export function updateUser(questId, choice) {
     user.hp = user.hp + choice.hp;
 
     user.completed[questId] = true;
+
+    header.textContent = `Name: ${user.name} Class: ${user.class} hp: ${user.hp} Gold: ${user.gold}`;
 
     setUser(user);
 }

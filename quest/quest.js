@@ -1,13 +1,19 @@
 import { quests } from '../data.js';
-import { updateUser } from '../local-storage-utils.js';
+import { updateUser, getUser } from '../local-storage-utils.js';
 import { findById } from '../utils.js';
+import { renderHeader } from '../render-utils.js';
 
-
+const body = document.querySelector('body');
 const section = document.querySelector('section');
-const params = new URLSearchParams(window.location.search);
 
+const user = getUser();
+const params = new URLSearchParams(window.location.search);
 const questId = params.get('id');
 const quest = findById(quests, questId);
+
+const header = renderHeader(user);
+
+body.append(header, section);
 
 const title = document.createElement('h2');
 title.textContent = quest.title;
@@ -50,7 +56,7 @@ form.addEventListener('submit', (event) => {
 
     form.textContent = chosenOption.result;
 
-    updateUser(questId, chosenOption);
+    updateUser(questId, chosenOption, header);
 
     function changeWindow() {
         window.location = '../map';

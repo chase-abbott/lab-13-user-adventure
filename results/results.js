@@ -11,7 +11,7 @@ let hpStatus;
 
 if (user.gold >= 100) {
     goldStatus = 'superRich';
-} else if (user.gold > 55 && user.gold < 100) {
+} else if (user.gold >= 55 && user.gold < 100) {
     goldStatus = 'rich';
 } else if (user.gold < 55 && user.gold > 15) {
     goldStatus = 'neitherRichNorPoor';
@@ -19,9 +19,9 @@ if (user.gold >= 100) {
     goldStatus = 'poor';
 }
 
-if (user.hp >= 45) {
+if (user.hp >= 35) {
     hpStatus = 'strong';
-} else if (user.hp > 15 && user.hp < 45) {
+} else if (user.hp > 1 && user.hp < 35) {
     hpStatus = 'weak';
 } else {
     hpStatus = 'dead';
