@@ -2,9 +2,10 @@
 const castle = {
     id: 'castle',
     title: "The King's Castle",
-    // map: {
-
-    // },
+    map: {
+        top: '12%',
+        left: '15%'
+    },
     image: 'castle.png',
     description: 'You enter the front gates to a large town square',
     choices: [{
@@ -22,9 +23,9 @@ const castle = {
     }, {
         id: 'bar',
         description: "You've had a long journey, head to the bar to get a drink",
-        result: 'The town drunk challenges you to a fight for 15 gold. You win but at a cost of a black eye. Lose 10 health but gain 15 gold',
-        hp: -10,
-        gold: 15
+        result: 'The town drunk challenges you to a fight for 15 gold. You win but at a cost of a black eye. Lose 20 health but gain 25 gold',
+        hp: -20,
+        gold: 25
     }]
 
 };
@@ -32,9 +33,10 @@ const castle = {
 const fountain = {
     id: 'fountain',
     title: 'The Fountain of Youth',
-    // map: {
-
-    // },
+    map: {
+        top: '65%',
+        left: '23%'
+    },
     image: 'pond.png',
     description: 'In a clearing you see a rocky outcropping surrounding a small pond that looks magical.',
     choices: [{
@@ -61,9 +63,10 @@ const fountain = {
 const cave = {
     id: 'cave',
     title: 'Spooky Cave',
-    // map: {
-
-    // },
+    map: {
+        top: '10%',
+        left: '72%'
+    },
     image: 'cave.png',
     description: 'You approach an enormous opening in the side of a hill and assume it goes very deep',
     choices: [{
@@ -75,7 +78,7 @@ const cave = {
     }, {
         id: 'bribe',
         description: 'Convince a passerby to join you',
-        result: 'You enter to find a  sabertooth! You and your friend best it but lose 10hp and find a treasure chest not far from it. You spilt the treasure and gain 40g gold',
+        result: 'You enter to find a  sabertooth! You and your friend best it but lose 10hp and find a treasure chest not far from it. You spilt the treasure and gain 40 gold',
         hp: -10,
         gold: 40,
     }, {

@@ -43,6 +43,8 @@ test('Test updateUser function', (expect) => {
         class: 'warrior'
     };
 
+    let header = document.createElement('h2');
+
     localStorage.setItem('USER', JSON.stringify(user));
 
     const choice = {
@@ -60,7 +62,7 @@ test('Test updateUser function', (expect) => {
         class: 'warrior'
     };
 
-    updateUser('cave', choice);
+    updateUser('cave', choice, header);
 
     const actual = JSON.parse(localStorage.getItem('USER'));
     expect.deepEqual(actual, expected);

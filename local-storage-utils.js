@@ -1,3 +1,5 @@
+import { quests } from './data.js';
+
 const USER = 'USER';
 
 export function setUser(user) {
@@ -16,7 +18,7 @@ export function getUser() {
     return parsedArray;
 }
 
-export function updateUser(questId, choice) {
+export function updateUser(questId, choice, header) {
     const user = getUser();
 
     user.gold = choice.gold + user.gold;
@@ -25,5 +27,18 @@ export function updateUser(questId, choice) {
 
     user.completed[questId] = true;
 
+    header.textContent = `Name: ${user.name} Class: ${user.class} hp: ${user.hp} Gold: ${user.gold}`;
+
     setUser(user);
+}
+
+export function areQuestsCompleted() {
+    const user = getUser();
+
+    for (let quest of quests) {
+        if (!user.completed[quest.id]) {
+            return false;
+        }
+    }
+    return true;
 }

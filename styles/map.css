@@ -1,0 +1,50 @@
+a {
+    cursor: pointer;
+    font-size: 2em;
+    color: rgb(13, 13, 146);
+    position: absolute;
+    font-weight: 700;
+}
+
+header {
+    font-size: 3em;
+    font-weight: 700;
+    box-shadow: none;
+    width: 100vw;
+    background-color: white;
+    height: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header > img {
+    margin: 1vw;
+    width: 5vw;
+    height: 5vw;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
+    color: whitesmoke;
+}
+
+
+
+ section {
+    background-image: url('../assets/map.png');
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 90vw;
+    height: calc(90vw * 642 / 900);
+    /* margin: auto; */
+ }
+
+ footer {
+     display: flex;
+     justify-content: center;
+     background-color: whitesmoke;
+ }
+

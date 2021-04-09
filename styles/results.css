@@ -1,0 +1,11 @@
+header {
+    font-size: 3em;
+    font-weight: 700;
+    box-shadow: none;
+    width: 100vw;
+    background-color: white;
+    height: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
