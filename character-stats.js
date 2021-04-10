@@ -13,7 +13,7 @@ const rogue = {
 const mage = {
     id: 'mage',
     hp: 20,
-    gold: 10
+    gold: 25
 };
 
 const paladin = {
