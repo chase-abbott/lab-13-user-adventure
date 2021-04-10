@@ -50,17 +50,21 @@ form.addEventListener('submit', (event) => {
 
     const data = new FormData(form);
     const chosenOptionId = data.get('choices');
-
     const chosenOption = findById(quest.choices, chosenOptionId);
 
-    form.textContent = chosenOption.result;
+    form.classList.add('hidden');
+
+    const newP = document.createElement('p');
+    newP.textContent = chosenOption.result;
+
+    const newLink = document.createElement('a');
+    newLink.href = '../map';
+    newLink.textContent = 'Back to Map';
+
+    section.append(newP, newLink);
+
     const h2 = document.querySelector('h2');
     updateUser(questId, chosenOption, h2);
 
-    function changeWindow() {
-        window.location = '../map';
-    }
-
-    setTimeout(changeWindow, 3000);
 });
 

@@ -11,6 +11,9 @@ header {
     margin: 1vw;
 }
 
+.hidden {
+    display: none;
+}
 
 header > img {
     margin: 2vw;

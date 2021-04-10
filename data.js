@@ -17,9 +17,9 @@ const castle = {
     }, {
         id: 'store',
         description: 'You decide to sell what you have found along the way',
-        result: "It's a good day to sell some treasure! Gain 25 gold",
+        result: "It's a good day to sell some treasure! Gain 10 gold",
         hp: 0,
-        gold: 25
+        gold: 10
     }, {
         id: 'bar',
         description: "You've had a long journey, head to the bar to get a drink",
@@ -42,8 +42,8 @@ const fountain = {
     choices: [{
         id: 'jump',
         description: 'You think, screw it, and jump in',
-        result: 'You feel an enormous energy wash over you, can 35 health!',
-        hp: 35,
+        result: 'You feel an enormous energy wash over you, can 25 health!',
+        hp: 25,
         gold: 0,
     }, {
         id: 'save',
@@ -54,8 +54,8 @@ const fountain = {
     }, {
         id: 'ignore',
         description: 'This is sketchy, ignore it and keep walking',
-        result: 'Could have been a good call, but no way to be certain. Nothing Happens',
-        hp: 0,
+        result: 'Could have been a good call, but no way to be certain. You stub your toe on your way through the forest, lose 5hp.',
+        hp: -5,
         gold: 0
     }]
 };
@@ -72,21 +72,21 @@ const cave = {
     choices: [{
         id: 'run',
         description: "Don't want any of that mess, run away",
-        result: 'An enormous sabertooth jumps at you and mauls you for 40 damage',
-        hp: -45,
+        result: 'An enormous sabertooth jumps at you and mauls you for 30 damage',
+        hp: -30,
         gold: 0
     }, {
         id: 'bribe',
         description: 'Convince a passerby to join you',
         result: 'You enter to find a  sabertooth! You and your friend best it but lose 10hp and find a treasure chest not far from it. You spilt the treasure and gain 40 gold',
         hp: -10,
-        gold: 40,
+        gold: 30,
     }, {
         id: 'enter',
         description: 'Enter by yourself',
-        result: 'You enter to find a  sabertooth! You best it but at a cost of 20hp and find a treasure chest not far from it. You gain 80 gold',
+        result: 'You enter to find a  sabertooth! You best it but at a cost of 20hp and find a treasure chest not far from it. You gain 60 gold',
         hp: -20,
-        gold: 80,
+        gold: 60,
     }]
 };
 

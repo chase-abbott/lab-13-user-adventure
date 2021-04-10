@@ -28,7 +28,7 @@ header > img {
 .disabled {
     pointer-events: none;
     cursor: default;
-    color: teal;
+    color: gray;
 }
 .disabled:after {
 content: ' ✔';
