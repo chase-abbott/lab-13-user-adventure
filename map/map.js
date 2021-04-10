@@ -14,7 +14,7 @@ const header = renderHeader(user);
 body.append(header);
 main.append(header, section);
 
-if (areQuestsCompleted() || user.hp < 0) {
+if (areQuestsCompleted() || user.hp <= 0) {
     window.location = '../results';
 }
 

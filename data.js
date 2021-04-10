@@ -17,9 +17,9 @@ const castle = {
     }, {
         id: 'store',
         description: 'You decide to sell what you have found along the way',
-        result: "It's a good day to sell some treasure! Gain 25 gold",
+        result: "It's a good day to sell some treasure! Gain 10 gold",
         hp: 0,
-        gold: 25
+        gold: 10
     }, {
         id: 'bar',
         description: "You've had a long journey, head to the bar to get a drink",
