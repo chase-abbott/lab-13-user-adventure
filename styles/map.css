@@ -25,6 +25,10 @@ header > img {
     height: 5vw;
 }
 
+header > h2 {
+    margin-right: 1rem;
+}
+
 .disabled {
     pointer-events: none;
     cursor: default;

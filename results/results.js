@@ -26,9 +26,9 @@ if (user.gold >= 100) {
     goldStatus = 'poor';
 }
 
-if (user.hp >= 35) {
+if (user.hp >= 25) {
     hpStatus = 'strong';
-} else if (user.hp > 1 && user.hp < 35) {
+} else if (user.hp > 1 && user.hp < 25) {
     hpStatus = 'weak';
 } else {
     hpStatus = 'dead';

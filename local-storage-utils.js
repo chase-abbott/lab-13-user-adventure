@@ -18,7 +18,7 @@ export function getUser() {
     return parsedArray;
 }
 
-export function updateUser(questId, choice, header) {
+export function updateUser(questId, choice) {
     const user = getUser();
 
     user.gold = choice.gold + user.gold;
@@ -27,7 +27,7 @@ export function updateUser(questId, choice, header) {
 
     user.completed[questId] = true;
 
-    header.textContent = `Name: ${user.name} Class: ${user.class} hp: ${user.hp} Gold: ${user.gold}`;
+    //header.textContent = `Name: ${user.name} Class: ${user.class} hp: ${user.hp} Gold: ${user.gold}`;
 
     setUser(user);
 }

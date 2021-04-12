@@ -1,7 +1,7 @@
 import { quests } from '../data.js';
 import { updateUser, getUser } from '../local-storage-utils.js';
 import { findById } from '../utils.js';
-import { renderHeader } from '../render-utils.js';
+import { renderHeader, renderUpdatedHeader } from '../render-utils.js';
 
 const main = document.querySelector('main');
 const section = document.querySelector('section');
@@ -63,8 +63,9 @@ form.addEventListener('submit', (event) => {
 
     section.append(newP, newLink);
 
-    const h2 = document.querySelector('h2');
-    updateUser(questId, chosenOption, h2);
+    // const h2 = document.querySelector('h2');
+    updateUser(questId, chosenOption);
+    renderUpdatedHeader();
 
 });
 
