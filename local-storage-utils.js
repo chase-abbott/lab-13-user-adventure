@@ -2,12 +2,14 @@ import { quests } from './data.js';
 
 const USER = 'USER';
 
-export function setUser(user) {
-    const stringyArray = JSON.stringify(user);
+// intakes an array or object and puts in local storage under the key 'USER'
+export function setUser(array) {
+    const stringyArray = JSON.stringify(array);
 
     localStorage.setItem(USER, stringyArray);
 }
 
+// grabs key 'USER' from local storage and parses the corresponding array
 export function getUser() {
     const stringyArray = localStorage.getItem(USER);
 
@@ -18,7 +20,8 @@ export function getUser() {
     return parsedArray;
 }
 
-export function updateUser(questId, choice, header) {
+// intakes a questId and choice and re-sets local storage with the updated data
+export function updateUser(questId, choice) {
     const user = getUser();
 
     user.gold = choice.gold + user.gold;
@@ -27,15 +30,15 @@ export function updateUser(questId, choice, header) {
 
     user.completed[questId] = true;
 
-    header.textContent = `Name: ${user.name} Class: ${user.class} hp: ${user.hp} Gold: ${user.gold}`;
-
     setUser(user);
 }
 
+// determines if all quests available are completed
 export function areQuestsCompleted() {
     const user = getUser();
 
     for (let quest of quests) {
+        // if user does not have quest completed in local storage, quests are not completed
         if (!user.completed[quest.id]) {
             return false;
         }
