@@ -1,5 +1,6 @@
 import { getUser } from './local-storage-utils.js';
 
+// intakes user data and generates header DOM
 export function renderHeader(user) {
 
     const header = document.createElement('header');
@@ -26,6 +27,7 @@ export function renderHeader(user) {
     return header;
 }
 
+// updates header data
 export function renderUpdatedHeader() {
     const user = getUser();
     const h1 = document.querySelector('#hp');
@@ -34,5 +36,5 @@ export function renderUpdatedHeader() {
     h1.textContent = `Hp: ${user.hp}`;
     h2.textContent = `Gold: ${user.gold}`;
 
-    return [h1, h2,];
+    return [h1, h2];
 }
